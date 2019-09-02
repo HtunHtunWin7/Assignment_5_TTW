@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hotel4" />
+
+    <TextView
+        android:layout_marginStart="@dimen/card_margin"
+        android:id="@+id/textFamilyHouse"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardView"
+        android:text="@string/single_family_house"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_margin="@dimen/card_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFamilyHouse"
+        android:text="@string/text_paragh" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Add Favorite"
+        android:textAllCaps="false"
+        android:layout_marginStart="64dp"
+        android:padding="8dp"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/shape"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:text="Book Now"
+        android:layout_marginEnd="64dp"
+        android:padding="8dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/shape"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/card_margin"
+
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="32dp">
+
+            <TextView
+                android:id="@+id/textPrice"
+                style="@style/TextAppearance.AppCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 12,00000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPrice"
+                android:layout_marginTop="16dp"
+                android:text="@string/west_minster_london" />
+
+            <TextView
+                android:id="@+id/textDollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textPlace"
+                android:layout_marginTop="16dp"
+                android:text="@string/_3200_saft" />
+
+            <TextView
+                android:id="@+id/textBathrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textDollar"
+                android:layout_marginStart="64dp"
+                android:layout_toRightOf="@+id/textDollar"
+                android:text="@string/_4_bathrooms" />
+
+            <TextView
+                android:id="@+id/textFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDollar"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="324 favorites" />
+
+            <TextView
+                android:id="@+id/textReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textDollar"
+                android:layout_alignStart="@+id/textBathrooms"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="23 Reviews" />
+
+            <TextView
+                android:id="@+id/textSeeReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="See Reviews"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textSeeReviews"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/shape"
+                android:padding="8dp"
+                android:text="See Photos"
+                android:textColor="@color/blue" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/textFavorite"
+                android:layout_marginTop="@dimen/card_margin"
+                android:background="#bdbdbd" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_near_me_black_24dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
