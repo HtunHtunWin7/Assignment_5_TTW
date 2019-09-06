@@ -1,20 +1,25 @@
 package com.greenovator.assignment_5.network.response;
 
+import com.google.gson.annotations.SerializedName;
 import com.greenovator.assignment_5.data.VO.EventVo;
+import com.greenovator.assignment_5.utils.EventConstants;
 
 import java.util.List;
 
 public class EventItemResponse {
 
-    private String code;
+    @SerializedName("code")
+    private int code;
+    @SerializedName("message")
     private String message;
+    @SerializedName("data")
     private List<EventVo> eventVoList;
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -32,5 +37,10 @@ public class EventItemResponse {
 
     public void setEventVoList(List<EventVo> eventVoList) {
         this.eventVoList = eventVoList;
+    }
+
+
+    public Boolean ResponseOk (){
+        return code == EventConstants.EVETN_RESPONSE_OK && eventVoList != null;
     }
 }

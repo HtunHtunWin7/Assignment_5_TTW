@@ -6,15 +6,16 @@
     android:background="#eeeeee"
     android:orientation="vertical">
     <ImageView
+        android:id="@+id/detail_image"
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:layout_alignParentTop="true"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         android:src="@drawable/hotel4" />
 
-    <TextView
+    <org.mmtextview.components.MMTextView
         android:layout_marginStart="@dimen/card_margin"
-        android:id="@+id/textFamilyHouse"
+        android:id="@+id/detail_name"
         style="@style/TextAppearance.AppCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,13 +23,15 @@
         android:text="@string/single_family_house"
         android:textStyle="bold" />
 
-    <TextView
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/detail_description"
         android:layout_margin="@dimen/card_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textFamilyHouse"
+        android:layout_below="@+id/detail_name"
         android:text="@string/text_paragh" />
     <Button
+        android:id="@+id/detail_btn_favoriate"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:text="Add Favorite"
@@ -40,6 +43,7 @@
         android:backgroundTint="@color/white"
         android:background="@drawable/shape"/>
     <Button
+        android:id="@+id/detail_btn_book"
         android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:text="Book Now"
@@ -60,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="@dimen/card_margin"
-
+        android:background="@color/card_background_color"
         app:cardCornerRadius="20dp">
 
         <RelativeLayout
@@ -69,7 +73,7 @@
             android:padding="32dp">
 
             <TextView
-                android:id="@+id/textPrice"
+                android:id="@+id/detail_price"
                 style="@style/TextAppearance.AppCompat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,18 +82,18 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textPlace"
+                android:id="@+id/detail_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textPrice"
+                android:layout_below="@+id/detail_price"
                 android:layout_marginTop="16dp"
                 android:text="@string/west_minster_london" />
 
             <TextView
-                android:id="@+id/textDollar"
+                android:id="@+id/detail_squarehouse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textPlace"
+                android:layout_below="@+id/detail_place"
                 android:layout_marginTop="16dp"
                 android:text="@string/_3200_saft" />
 
@@ -97,16 +101,16 @@
                 android:id="@+id/textBathrooms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textDollar"
+                android:layout_alignBottom="@+id/detail_squarehouse"
                 android:layout_marginStart="64dp"
-                android:layout_toRightOf="@+id/textDollar"
+                android:layout_toRightOf="@+id/detail_squarehouse"
                 android:text="@string/_4_bathrooms" />
 
             <TextView
                 android:id="@+id/textFavorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textDollar"
+                android:layout_below="@+id/detail_squarehouse"
                 android:layout_marginTop="@dimen/card_margin"
                 android:text="324 favorites" />
 
@@ -114,7 +118,7 @@
                 android:id="@+id/textReviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textDollar"
+                android:layout_below="@+id/detail_squarehouse"
                 android:layout_alignStart="@+id/textBathrooms"
                 android:layout_marginTop="@dimen/card_margin"
                 android:text="23 Reviews" />
@@ -148,6 +152,7 @@
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/deatil_floatingaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"

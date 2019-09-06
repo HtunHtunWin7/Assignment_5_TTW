@@ -7,11 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.greenovator.assignment_5.R;
-import com.greenovator.assignment_5.activities.EventDetailActivity;
-import com.greenovator.assignment_5.activities.MainActivity;
 import com.greenovator.assignment_5.data.VO.EventVo;
 import com.greenovator.assignment_5.delegate.EventDetailDelegate;
 import com.greenovator.assignment_5.view.holder.EventListHolder;
@@ -31,15 +28,7 @@ private EventDetailDelegate eventDetailDelegate;
         return new EventListHolder(view,eventDetailDelegate);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull EventListHolder viewHolder, int position) {
 
-    }
-
-    @Override
-    public int getItemCount() {
-        return 10;
-    }
 
 
 }

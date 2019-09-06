@@ -1,21 +1,43 @@
 package com.greenovator.assignment_5.data.VO;
 
+import android.net.Uri;
+
+import com.google.gson.annotations.SerializedName;
+
 public class EventVo {
-    private String image_url;
+    @SerializedName("id")
+    private int id;
+    @SerializedName("house_image_url")
+    private String houseImageUri;
+    @SerializedName("name")
     private String name;
+    @SerializedName("description")
     private String description;
+    @SerializedName("price")
     private String price;
+    @SerializedName("address")
     private String address;
-    private int squre_feet;
+    @SerializedName("square_feet")
+    private int squareFeet;
+    @SerializedName("latitude")
     private double latitude;
+    @SerializedName("longitude")
     private double longitude;
 
-    public String getImage_url() {
-        return image_url;
+    public int getId() {
+        return id;
     }
 
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getHouseImageUri() {
+        return houseImageUri;
+    }
+
+    public void setHouseImageUri(String houseImageUri) {
+        this.houseImageUri = houseImageUri;
     }
 
     public String getName() {
@@ -50,12 +72,12 @@ public class EventVo {
         this.address = address;
     }
 
-    public int getSqure_feet() {
-        return squre_feet;
+    public int getSquareFeet() {
+        return squareFeet;
     }
 
-    public void setSqure_feet(int squre_feet) {
-        this.squre_feet = squre_feet;
+    public void setSquareFeet(int squareFeet) {
+        this.squareFeet = squareFeet;
     }
 
     public double getLatitude() {

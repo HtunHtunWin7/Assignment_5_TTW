@@ -46,7 +46,7 @@ public class HttpUriConnectionAgent implements EventDataAgent {
         private GetEventsFromNetworkDelegate getEventsFromNetworkDelegate;
 
         public GetEventsTask(GetEventsFromNetworkDelegate delegate) {
-            this.getEventsFromNetworkDelegate = delegate;
+            getEventsFromNetworkDelegate = delegate;
             //this.accessToken = accessToken;
         }
 

@@ -5,10 +5,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.greenovator.assignment_5.view.holder.BaseViewHolder;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseRecyclerAdapter<T extends BaseViewHolder<W>,W> extends RecyclerView.Adapter<T> {
+public abstract class BaseRecyclerAdapter<T extends BaseViewHolder<W>, W> extends RecyclerView.Adapter<T> {
     private List<W> mData;
+
+    BaseRecyclerAdapter() {
+        mData = new ArrayList<>();
+    }
 
     @Override
     public void onBindViewHolder(@NonNull T viewHolder, int position) {
@@ -20,7 +25,7 @@ public abstract class BaseRecyclerAdapter<T extends BaseViewHolder<W>,W> extends
         return mData.size();
     }
 
-    public void setNewData(List<W> data){
+    public void setNewData(List<W> data) {
         mData = data;
         notifyDataSetChanged();
     }

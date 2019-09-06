@@ -29,17 +29,27 @@ public class EventModelImpl extends BaseModel implements EventModel {
 
 
     @Override
-    public void getEvents(GetEventsFromNetworkDelegate delegate) {
+    public void getEvents(final GetEventsFromNetworkDelegate delegate) {
         mDataAgent.getEvents(new EventDataAgent.GetEventsFromNetworkDelegate() {
             @Override
             public void onSuccess(List<EventVo> eventVos) {
-
+                for (EventVo eventVo : eventVos) {
+                    evetnsDataRepository.put(eventVo.getId(), eventVo);
+                }
+                delegate.onSuccess(eventVos);
             }
 
             @Override
             public void onFailure(String errorMessage) {
-
+                delegate.onFailure(errorMessage);
             }
         });
     }
+
+    @Override
+    public EventVo findById(int id) {
+        EventVo eventVo = evetnsDataRepository.get(id);
+        return eventVo;
+    }
+
 }
